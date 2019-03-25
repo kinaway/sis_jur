@@ -1,8 +1,7 @@
 <?php
-if(!$_SESSION){
-    header("Location: http://localhost/Jur/login.php");
+session_start();
+if(!isset($_SESSION['LOGIN'])){
+    header("Location: http://".$_SERVER['SERVER_NAME']."/sis_jur/login.php");
     exit();
-} else {
-    var_dump($_SESSION);
 }
 ?>
